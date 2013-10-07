@@ -1,0 +1,73 @@
+body {
+	background-image:url('gradient.jpg');
+	background-size: 100%;
+	color: #035567;
+}
+
+
+#info,h1,div {
+	position: relative;
+	float:right;
+	display:block;
+	clear:both;
+}
+
+h1{
+	margin-top:3em;
+	margin-right:3em;
+}
+
+#info  {
+	position:relative;
+	float:right;
+	margin-right:13.7em;
+}
+
+#logo,#description {
+	position:relative;
+	float:left;
+	display:block;
+}
+
+#logo {
+	margin-top:-2.5em;
+	width:35em;
+	height:17em;
+	padding-left:5em;
+	padding-right:0em;
+}
+
+#description {
+	padding:5em;
+	margin-top:-5em;
+	position:relative;
+	clear:both;
+}
+
+.info {
+	position:relative;
+	float:right;
+	padding-bottom:0em;
+	margin-left:2.5em;
+}
+
+.center {
+	position:relative;
+	margin-left: 21em;
+}
+
+
+.login {
+	position:relative;
+	float:right;
+	padding-bottom:0em;
+	margin-bottom:0em;
+	margin-right:1em;
+	margin-left: 3em;
+	display: block;
+}
+
+.centerlogin {
+	position:relativ;
+	margin-left: 2em;
+}

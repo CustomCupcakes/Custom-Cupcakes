@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Custom Cupcakes</title>
 </head>
-<fieldset id = "login">
-<form name="login" action="" method="get">
-Email:<input type="text" name="email"><br>
-Password:<input type="text" name="password"><br>
-<input type="submit" value="Login">
-</form>
-</fieldset>
+<body>
+<div id = "login"><h4>
+<form name="login" action="" method="get" >
+Email:<input type="text" name="email" class = "login"><br>
+Password:<input type="text" name="password" class = "login"><br>
+<input type="submit" value="Login" class = "centerlogin">
+</form></h4>
+</div>
 <form>
-<h1>Create a Custom Cupcake Account</h1>
-<fieldset id = "info"> Join Our Mailing List: 
-<input type="radio" name="email" value="yes">Yes
+<div><h1>Create a Custom Cupcake Account</h1></div>
+<h3><span id = "info"> Join Our Mailing List: 
+<span id = "a">&nbsp;&nbsp;
+<input type="radio" name="email" value="yes"> Yes &nbsp;
 <input type="radio" name="email" value="no">No <br>
+</span>
 <form name="info" action="" method="get">
-First Name:<input type="text" name="fname"><br>
-Last Name:<input type="text" name="lname"><br>
-Email:<input type="text" name="lname"><br>
-Password:<input type="text" name="lname"><br>
-Telephone Number:<input type="text" name="lname"><br>
-Address:<input type="text" name="lname"><br>
-City:<input type="text" name="lname"><br>
-State:<select name="state">
+First Name:<input type="text" name="fname" class = "info"><br>
+Last Name:<input type="text" name="lname" class = "info"><br>
+Email:<input type="text" name="email" class = "info"><br>
+Password:<input type="text" name="password" class = "info"><br>
+Telephone Number:<input type="text" name="phone" class = "info"><br>
+Address:<input type="text" name="address" class = "info"><br>
+City:<input type="text" name="city"class = "info"><br>
+State:<select name="state" class = "info">>
 	<option value="AL">AL</option>
 	<option value="AK">AK</option>
 	<option value="AZ">AZ</option>
@@ -77,17 +81,20 @@ State:<select name="state">
 	<option value="WY">WY</option>
 </select>
 <br>
-Zipcode:<input type="text" name="lname"><br>
-<input type="submit" value="Sign Up">
+Zipcode:<input type="text" name="lname" class = "info"><br>
+<input type="submit" value="Sign Up" class = "center">
 </form>
-</fieldset>
+</span></h3>
 </form>
 <br>
-<img id = "logo" src="custom_logo.jpg" width=100px height=100px>
+<img id = "logo" src="custom_logo.jpg">
 <br>
 <div id ="description">
-Great Flavors!<br>
-Awesome Cupcakes<br>
-Fast Delivery!<br>
+<h4>
+Great Flavors!<br><br><br>
+Awesome Cupcakes<br><br><br>
+Fast Delivery!<br><br><br>
+</h4>
 </div>
+</body>
 </html>
