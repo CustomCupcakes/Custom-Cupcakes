@@ -1,0 +1,81 @@
+# mysql -u root -p --local-infile Cupcakes
+
+# Create and switch to Cupcakes database
+create database if not exists Cupcakes;
+use Cupcakes;
+
+# create the users table
+create table if not exists users
+(UserID int primary key, 
+OnMailingList varchar(3), 
+GivenName varchar(20), 
+Surname varchar(20), 
+StreetAddress varchar(30), 
+City varchar(20), 
+State varchar(20), 
+ZipCode int, 
+EmailAddress varchar(40), 
+Password varchar(30), 
+TelephoneNumber 
+varchar(20));
+
+# create the FavoriteCupcakes table
+create table if not exists FavoriteCupcakes
+(FavoriteID int primary key, 
+UserID int, 
+CupcakeID int, 
+FrostingID int, 
+CupcakeFillingID int, 
+FOREIGN KEY (UserID) REFERENCES users(UserID)) engine = innodb;
+
+# create the ToppingBridge table
+create table if not exists ToppingBridge
+(ToppingsBridgeID int primary key, 
+FavoriteID int, 
+ToppingID int, 
+foreign key (FavoriteID) references FavoriteCupcakes(FavoriteID)) engine = innodb;
+
+# create the Cakes table
+create table if not exists Cakes
+(CakeID int primary key,
+Flavor varchar(20),
+img_url varchar(40));
+
+# create the Frosting table
+create table if not exists Frosting
+(FrostingID int primary key,
+Flavor varchar(20),
+img_url varchar(40));
+
+# create the Fillings table
+create table if not exists Fillings
+(FillingID int primary key,
+Flavor varchar(20),
+rgb varchar(13));
+
+# create the Toppings table
+create table if not exists Toppings
+(ToppingID int primary key,
+name varchar(40));
+
+# populate the users table from the .csv file
+load data local infile 'data/CustomCupcakesDBData-Users.csv' 
+into table users
+columns terminated by ','
+lines terminated by '\n'
+ignore 1 lines;
+
+#populate the FavoriteCupcakes table from .csv file
+load data local infile 'data/CustomCupcakesDBData-FavoriteCupcakes.csv' 
+into table FavoriteCupcakes 
+columns terminated by ',' 
+lines terminated by '\n' 
+ignore 1 lines;
+
+#populate the ToppingsBridge table from .csv
+load data local infile 'data/CustomCupcakesDBData-ToppingsBridge.csv' 
+into table ToppingBridge 
+columns terminated by ',' 
+lines terminated by '\n' 
+ignore 1 lines;
+
