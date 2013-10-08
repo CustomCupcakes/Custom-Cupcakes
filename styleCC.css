@@ -1,0 +1,47 @@
+body {
+	background-image:url('gradient.jpg');
+	background-size: 110%;
+}
+
+#order{
+	float:right;
+	margin-right: 2%;
+	width:auto;
+	border-style:solid;
+	border-width:medium;
+}
+
+main{
+	width:75%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+main div{
+	border-style:solid;
+	border-width:medium;
+	overflow: auto;
+	overflow-y: hidden;
+	margin-bottom: 1%;
+}
+
+main div h3{
+	margin-top: -.15%;
+	margin-left: .1%;
+}
+aside{
+	margin-top: auto;
+	margin-bottom: auto;
+	height:auto;
+	width: 10%;
+	overflow: auto;
+	border-style:solid;
+	border-width:medium;
+}
+
+.buttonCenter{
+	margin: 0 auto;
+	display: block;
+}
