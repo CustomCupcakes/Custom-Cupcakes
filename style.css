@@ -1,74 +1,12 @@
 body {
 	background-image:url('gradient.jpg');
 	background-size: 110%;
-	color: 'black';
-}
-
-
-#info,h1,div {
-	position: relative;
-	float:right;
-	display:block;
-	clear:both;
-}
-
-h1{
-	margin-top:1em;
-	margin-right:3em;
-	padding:0em;
-}
-
-#info  {
-	position:relative;
-	float:right;
-	margin-right:13.7em;
-	margin-top:0em;
-	padding-top:1em;
-}
-
-#description {
-	position:relative;
-	float:left;
-	display:block;
-}
-
-#logo {
-    position:relative;
-	float:left;
-	display:block;
-	margin-top:-3em;
-	width:35em;
-	height:17em;
-	padding-left:5em;
-	padding-right:0em;
-}
-
-#description {
-	padding:5em;
-	margin-top:-5em;
-	position:relative;
-	clear:both;
-	display: inline;
-}
-
-.info {
-	position:relative;
-	float:right;
-	padding-bottom:0em;
-	margin-left:2.5em;
-}
-
-.center {
-	position:relative;
-	margin-left: 21em;
 }
 
 
 .login {
-	position:relative;
     margin-right:.5em;
 	float:right;
-	display: block;
 	padding-top:0em;
 }
 
@@ -79,16 +17,22 @@ h1{
 
 #password {
 	padding-bottom:0em;
-	margin-left: .75em;
+	margin-left: 1em;
 }
 
 #login_button {
-	position:relative;
 	float:right;
 }
 
+#createAccount{
+	float:right;
+	margin-top: 5%;
+	margin-right:-3%;
+}
+
+
 hr {
-	position:relative;
+	position: relative;
 	height:3px;
 	color:#000;
 	background-color:#000;
@@ -96,3 +40,28 @@ hr {
 	border:0;
 	margin-left:.1em;
 }
+
+
+
+
+#logo {
+	width:100%;
+	height:80%;
+	padding-right:0em;
+}
+
+#description {
+	float:left;
+	padding-left:5em;
+	margin-top: 5%;
+}
+
+.info{
+
+}
+.center {
+	margin: 0 auto;
+	display: block;
+}
+
+
