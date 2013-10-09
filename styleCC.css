@@ -9,6 +9,7 @@ body {
 	width:auto;
 	border-style:solid;
 	border-width:medium;
+	border-color: pink;
 }
 
 main{
@@ -22,6 +23,7 @@ main{
 main div{
 	border-style:solid;
 	border-width:medium;
+	border-color: pink;
 	overflow: auto;
 	overflow-y: hidden;
 	margin-bottom: 1%;
@@ -39,9 +41,18 @@ aside{
 	overflow: auto;
 	border-style:solid;
 	border-width:medium;
+	border-color: pink;
 }
 
 .buttonCenter{
 	margin: 0 auto;
 	display: block;
+}
+
+#stepper{
+	margin-left: 80%;
+}
+
+.selected{
+	background-color: yellow;
 }
