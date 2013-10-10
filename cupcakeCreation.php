@@ -12,7 +12,7 @@
 	<body>
 		<div id = "order">
 			<h3>Order Summary</h3>
-			<button type ="submit" class = "buttonCenter">Order</button>
+			<button type ="submit" id = "order_button"class = "buttonCenter">Order</button>
 		</div>
 		<aside id = "favorites">
 			<h3>Favorites</h3>

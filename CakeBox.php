@@ -10,8 +10,13 @@
 	$result = mysql_query($query);
 	//While loop that goes through all of the Flavor/img combinations
 	while($row = mysql_fetch_array($result)){
-		echo $row['Flavor'] . " " . $row['img_url'];
-		echo "<br>";
+		//echo $row['Flavor'] . " " . $row['img_url'];
+		$url = "/resources/artwork/" . $row['img_url'];
+		echo " <div>
+				<img src = $url>
+				<p> {$row['Flavor']} </p>
+			</div>
+			";
 	}
 	mysql_close($con);
 ?>
