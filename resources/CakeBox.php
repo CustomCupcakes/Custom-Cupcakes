@@ -1,5 +1,5 @@
 <?php
-	$con = mysql_connect("localhost", "cupcakes", "muffinman");
+	$con = mysql_connect("localhost", "root", "password");
 	if (!$con)
 	{
 		die('Could not connect: ' . mysql_error());
@@ -10,8 +10,9 @@
 	$result = mysql_query($query);
 	//While loop that goes through all of the Flavor/img combinations
 	while($row = mysql_fetch_array($result)){
-		echo $row['Flavor'] . " " . $row['img_url'];
+		echo "$row['Flavor'] . " " . $row['img_url']";
 		echo "<br>";
+		echo "<p> What is Up </p>";
 	}
 	mysql_close($con);
 ?>

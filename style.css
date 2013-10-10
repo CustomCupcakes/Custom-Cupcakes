@@ -5,14 +5,14 @@ body {
 
 
 .login {
-    margin-right:.5em;
+    margin-right:1em;
 	float:right;
 	padding-top:0em;
 }
 
 #email {
     padding-bottom:0em;
-	margin-left: 3em;
+	margin-left: 3.3em;
 }
 
 #password {
@@ -41,8 +41,42 @@ hr {
 	margin-left:.1em;
 }
 
+.info {
+	position:relative;
+	padding-bottom:0;
+}
 
+#fname {
+	margin-left:7.7em;
+}
 
+#lname {
+	margin-left:7.9em;
+}
+
+#email_signup {
+	margin-left:11em;
+}
+
+#password_signup {
+	margin-left: 8.6em;
+}
+
+#phone {
+	margin-left:2.6em;
+}
+
+#address {
+	margin-left:9.55em;
+}
+
+#city {
+	margin-left:12em;
+}
+
+#state {
+	margin-left:18.2em;
+}
 
 #logo {
 	width:100%;
@@ -56,12 +90,13 @@ hr {
 	margin-top: 5%;
 }
 
-.info{
-
+#zip {
+	margin-left:9.6em;
 }
 .center {
 	margin: 0 auto;
 	display: block;
+
 }
 
 

@@ -4,6 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="styleCC.css">
+		<script language="javascript" type="text/javascript" src="favorites.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 		<title> Create a Cupcake </title>
 	</head>
 	<body>
@@ -23,7 +26,7 @@
 				<h3>Filling</h3>
 			</div>
 			<div id = "icing">
-				<h3>Icing</h3>
+				<h3>Frosting</h3>
 			</div>
 			<div id = "toppings">
 				<h3>Toppings</h3>

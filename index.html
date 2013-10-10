@@ -6,33 +6,35 @@
 	</head>
 
 	<body>
+	<h4>
 		<div class = "login">
-			<form name="login" action="" method="get" >
-				Email:<input type="text" name="email" id = "email"><br>
-				Password:<input type="text" name="password" id = "password"><br>
-				<input type="submit" value="Login" id = "login_button">
+			<form name="login" action = "login.php" method="get" >
+				Email:<input type="text" name="email" id = "email" pattern = ".+\@.+\..+" title = "Enter a valid email address" required><br>
+				Password:<input type="password" name="password" id = "password" pattern = ".{8,}" title = "Enter at least 8 characters" required><br>
+				<input type="submit" value="Login" id = "login_button"> 
 			</form>
 		</div>
+		</h4>
 		<br>
 		<div id = "createAccount">
 			<h1>Create a Custom Cupcake Account</h1>
 			<br>
 			<hr>
 			<h4>
-			<form name="info" action="" method="get">
+			<form name="info" action="signup.php" method="get">
 				<span id = "info"> Join Our Mailing List: &nbsp;
-					<input type="radio" name="email" value="yes"> Yes &nbsp;
+					<input type="radio" name="email" value="yes">Yes &nbsp;
 					<input type="radio" name="email" value="no">No
 				</span>
 				<br>
-				First Name:<input type="text" name="fname" class = "info"><br>
-				Last Name:<input type="text" name="lname" class = "info"><br>
-				Email:<input type="text" name="email" class = "info"><br>
-				Password:<input type="text" name="password" class = "info"><br>
-				Telephone Number:<input type="text" name="phone" class = "info"><br>
-				Address:<input type="text" name="address" class = "info"><br>
-				City:<input type="text" name="city"class = "info"><br>
-				State:<select name="state" class = "info">>
+				First Name:<input type="text" name="fname" class = "info" id = 'fname' pattern = "[a-zA-Z]+" title = "Alphabetic characters only" required><br>
+				Last Name:<input type="text" name="lname" class = "info" id = 'lname'  pattern = "[a-zA-Z]+" title = "Alphabetic characters only" required><br>
+				Email:<input type="text" name="email" class = "info" id = 'email_signup'pattern = ".+\@.+\..+" title = "Enter a valid email address" required><br>
+				Password:<input type="password" name="password" class = "info" id = 'password_signup' pattern = ".{8,}" title = "Enter at least 8 characters" placeholder="8 or more characters" required><br>
+				Telephone Number:<input type="text" name="phone" class = "info" id = "phone" required><br>
+				Address:<input type="text" name="address" class = "info" id = 'address' required><br>
+				City:<input type="text" name="city"class = "info" id = 'city' required><br>
+				State:<select name="state" class = "info" id = 'state'>>
 					<option value="AL">AL</option>
 					<option value="AK">AK</option>
 					<option value="AZ">AZ</option>
@@ -86,7 +88,7 @@
 					<option value="WY">WY</option>
 				</select>
 				<br>
-				Zipcode:<input type="text" name="lname" class = "info"><br>
+				Zipcode:<input type="text" name="lname" class = "info" id = 'zip' pattern = "\d{5,}" title = "5 or more numeric characters" required><br>
 				<input type="submit" value="Sign Up" class = "center">
 			</form><h4>
 		</div>
