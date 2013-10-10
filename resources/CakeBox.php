@@ -1,5 +1,5 @@
 <?php
-	$con = mysql_connect("localhost", "root", "password");
+	$con = mysql_connect("localhost", "cupcakes", "muffinman");
 	if (!$con)
 	{
 		die('Could not connect: ' . mysql_error());
@@ -14,4 +14,4 @@
 		echo "<br>";
 	}
 	mysql_close($con);
-	?>
+?>
