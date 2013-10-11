@@ -3,19 +3,31 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Analytics Screen </title>
-		<link rel="stylesheet" type="text/css" href="styleCC.css">
+		<link rel="stylesheet" type="text/css" href="styleAnalytics.css">
 		<script src="chartJS/Chart.js"></script>
 		<script src="analyticCharts.js"></script>
 	</head>
 	<body>
 		<h1>Custom Cupcakes Analytics</h1>
-		<canvas id = "flavorChart" width="300" height="300">
-		</canvas>
-		<canvas id = "fillingChart" width="300" height="300">
-		</canvas>
-		<canvas id = "icingChart" width="300" height="300">
-		</canvas>
-		<canvas id = "toppingChart" width="300" height="300">
-		</canvas>
+		<div id="pieCharts">
+		<div>
+			<canvas id = "flavorChart" width="300" height="300"></canvas>
+			<h3> Flavors </h3>
+		</div>
+		<div>
+			<canvas id = "fillingChart" width="300" height="300"></canvas>
+			<h3> Fillings </h3>
+		</div>
+		<div>
+			<canvas id = "icingChart" width="300" height="300"></canvas>
+			<h3> Frostings </h3>
+		</div>
+		</div>
+		<br>
+		<br>
+		<div id="barChart">
+			<canvas id = "toppingChart" width="1200" height="500"></canvas>
+			<h3> Toppings </h3>
+		</div>
 	</body>
 </html>

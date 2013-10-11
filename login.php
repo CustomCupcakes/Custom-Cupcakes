@@ -15,8 +15,8 @@
 	while ($row = mysql_fetch_assoc($id_query_result))	{
 		$id = $row ['UserID'];
 					}
-	//session_start();
-	//$_SESSION['UserID']=$id;
+	session_start();
+	$_SESSION['UserID']=$id;
 
 	$userID = $id; 
 	$password = $_GET['password'];

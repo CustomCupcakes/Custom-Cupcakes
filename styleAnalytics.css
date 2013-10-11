@@ -1,9 +1,21 @@
 body {
 	background-image:url('gradient.jpg');
-	background-size: 110%;
+	background-size: 150%;
 }
 
-canvas {
-	border-style:solid;
-	border-width:medium;
+#pieCharts, #barChart{
+	width:85%;
+	margin:0 auto;
+}
+
+
+#pieCharts div {
+	text-align: center;
+	display:inline-table;
+	border-spacing:30px 
+}
+
+
+h1,h3 {
+	text-align: center;
 }
