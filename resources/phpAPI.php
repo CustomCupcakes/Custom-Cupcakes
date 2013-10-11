@@ -13,17 +13,16 @@
 	mysql_select_db("Cupcakes", $con)
 	   or die("Unable to select database:" . mysql_error()); #need toppingID and title
 
-	$usrIDquery = mysql_query("SELECT * FROM FavoriteCupcakes where UserID = '$userID' UNION SELECT ToppingID FROM ToppingBridge t INNERJOIN FavoriteCupcakes f ON(t.FavoriteID = f.FavoriteID) WHERE f.UserID = '$userID'"); 
-
-	/*$toppingIDquery = mysql_query("SELECT ToppingID FROM ToppingBridge t INNERJOIN FavoriteCupcakes f ON(t.FavoriteID = f.FavoriteID) WHERE f.UserID = '$userID'");*/
-
+	$sth = mysql_query("select FavoriteCupcakes.FavoriteID, UserID, CupcakeID, ToppingID, FrostingID,CupcakeFillingID, title from FavoriteCupcakes left join ToppingBridge on FavoriteCupcakes.FavoriteID = ToppingBridge.FavoriteID join FavoriteLookup on FavoriteCupcakes.FavoriteID = FavoriteLookup.FavoriteID where UserID = 3;
+"); 
+	
 	$rows = array();
-	while($r = mysql_fetch_assoc($usrIDquery)) 
+	while($r = mysql_fetch_assoc($sth)) 
 	{
     		$rows[] = $r;
 	}
 
-	print json_encode($rows);
+	return json_encode($rows);
    }
 
 
