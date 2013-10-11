@@ -3,7 +3,7 @@
 	$JSONstring = file_get_contents("data/menu.json");
 	$data = json_decode($JSONstring,true);
 
-	$con = mysql_connect("localhost", "cupcakes", "muffinman");
+	$con = mysql_connect("localhost", "root", "Mellon");
    	if (!$con)
    	{
 		die('Could not connect: ' .mysql_error());
