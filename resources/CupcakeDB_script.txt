@@ -6,7 +6,7 @@ use Cupcakes;
 
 # create the users table
 create table if not exists users
-(UserID int primary key, 
+(UserID int primary key auto_increment, 
 OnMailingList varchar(3), 
 GivenName varchar(20), 
 Surname varchar(20), 
@@ -21,7 +21,7 @@ varchar(20));
 
 # create the FavoriteCupcakes table
 create table if not exists FavoriteCupcakes
-(FavoriteID int primary key, 
+(FavoriteID int primary key auto_increment, 
 UserID int, 
 CupcakeID int, 
 FrostingID int, 
@@ -30,7 +30,7 @@ FOREIGN KEY (UserID) REFERENCES users(UserID)) engine = innodb;
 
 # create the ToppingBridge table
 create table if not exists ToppingBridge
-(ToppingsBridgeID int primary key, 
+(ToppingsBridgeID int primary key auto_increment, 
 FavoriteID int, 
 ToppingID int, 
 foreign key (FavoriteID) references FavoriteCupcakes(FavoriteID)) engine = innodb;
@@ -57,6 +57,13 @@ rgb varchar(13));
 create table if not exists Toppings
 (ToppingID int primary key,
 name varchar(40));
+
+# create a lookup table for FavoriteCupcakes titles
+create table if not exists FavoriteLookup
+(FavoriteID int primary key auto_increment,
+title varchar(20),
+foreign key (FavoriteID) references FavoriteCupcakes(FavoriteID))
+engine = innodb;
 
 # populate the users table from the .csv file
 load data local infile 'data/CustomCupcakesDBData-Users.csv' 

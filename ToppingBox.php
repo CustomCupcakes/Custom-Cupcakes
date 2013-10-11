@@ -6,17 +6,14 @@
 	}
 	mysql_select_db("Cupcakes", $con)
 		or die("Unable to select database:" . mysql_error());
-	$query = "SELECT Flavor, img_url FROM Cakes";
+	$query = "SELECT name FROM Toppings";
 	$result = mysql_query($query);
+	$radio = "radio";
 	//While loop that goes through all of the Flavor/img combinations
 	while($row = mysql_fetch_array($result)){
-		//echo $row['Flavor'] . " " . $row['img_url'];
-		$url = "/resources/artwork/" . $row['img_url'];
-		echo " <div>
-				<img src = $url>
-				<p>{$row['Flavor']}</p>
-			</div>
-			";
+		//echo $row['name'];
+		$name = $row['name'];
+		echo "<input type=$radio value= $name>{$row['name']}";
 	}
 	mysql_close($con);
-?>
+	?>
