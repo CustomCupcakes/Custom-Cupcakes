@@ -6,7 +6,7 @@ use Cupcakes;
 
 # create the users table
 create table if not exists users
-(UserID int primary key, 
+(UserID int primary key auto_increment, 
 OnMailingList varchar(3), 
 GivenName varchar(20), 
 Surname varchar(20), 
