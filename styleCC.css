@@ -1,6 +1,6 @@
 body {
 	background-image:url('gradient.jpg');
-	background-size: 110%;
+	background-size: 200%;
 }
 
 #order{
@@ -13,21 +13,55 @@ body {
 }
 
 main{
-	width:75%;
+	width:60%;
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
 	
 }
 
-main div{
+
+
+main > div{
+	height: 100%;
 	border-style:solid;
 	border-width:medium;
 	border-color: pink;
-	overflow: auto;
-	overflow-y: hidden;
 	margin-bottom: 1%;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space:nowrap;
 }
+
+main div div{
+	border:none;
+	padding:10px;
+	padding-bottom:0px;
+	text-align: justify;
+	overflow-x:hidden;
+	width: 107px;
+	display:inline-table;
+}
+
+main div img, main div canvas{
+	width:107px;
+ 	display: block;
+	margin: 0 auto;
+	padding-bottom:0px;
+}
+
+main div p{
+	text-align: center;
+	white-space:normal;
+	padding:0px;
+}
+
+#toppings{
+	overflow-x:hidden;
+	white-space:normal;
+	display:table;
+}
+
 
 h3{
 	margin-top: 3px;
@@ -58,5 +92,5 @@ aside{
 }
 
 .selected{
-	background-color: yellow;
+	background-color: pink;
 }

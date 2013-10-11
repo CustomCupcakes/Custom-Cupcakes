@@ -6,11 +6,10 @@
 	}
 	mysql_select_db("Cupcakes", $con)
 		or die("Unable to select database:" . mysql_error());
-	$query = "SELECT Flavor, img_url FROM Cakes";
+	$query = "SELECT Flavor, img_url FROM Frosting";
 	$result = mysql_query($query);
 	//While loop that goes through all of the Flavor/img combinations
 	while($row = mysql_fetch_array($result)){
-		//echo $row['Flavor'] . " " . $row['img_url'];
 		$url = "/resources/artwork/" . $row['img_url'];
 		echo " <div>
 				<img src = $url>
@@ -19,4 +18,4 @@
 			";
 	}
 	mysql_close($con);
-?>
+	?>
