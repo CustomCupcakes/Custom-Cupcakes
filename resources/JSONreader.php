@@ -1,9 +1,9 @@
 <?php
 
-	$JSONstring = file_get_contents("menu.json");
+	$JSONstring = file_get_contents("data/menu.json");
 	$data = json_decode($JSONstring,true);
 
-	$con = mysql_connect("localhost", "root", "morgan");
+	$con = mysql_connect("localhost", "cupcakes", "muffinman");
    	if (!$con)
    	{
 		die('Could not connect: ' .mysql_error());
